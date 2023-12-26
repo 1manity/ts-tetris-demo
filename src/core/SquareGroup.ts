@@ -8,6 +8,9 @@ export class SquareGroup {
         return this._squares
     }
 
+    get shape(): Shape {
+        return this._shape
+    }
     get centerPoint(): Point {
         return this._centerPoint
     }

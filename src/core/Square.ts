@@ -11,6 +11,9 @@ export class Square {
     }
     set viewer(value: IViewer) {
         this._viewer = value
+        if (value) {
+            value.show()
+        }
     }
 
     get point(): Point {
