@@ -10,7 +10,9 @@ export default {
     levels: [
         {score: 0, duration: 1000},
         {score: 50, duration: 800},
-        {score: 100, duration: 600},
-        {score: 200, duration: 400},
+        {score: 200, duration: 600},
+        {score: 500, duration: 400},
+        {score: 3000, duration: 200},
+
     ]
 }

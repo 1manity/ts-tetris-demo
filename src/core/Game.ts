@@ -131,8 +131,6 @@ export class Game {
                 if (!TetrisRule.move(this.curTetris, MoveDirection.Down, this.exists)) {
                     this.hitBottom()
                 }
-
-
             }
         }, this._duration)
 
@@ -198,6 +196,14 @@ export class Game {
             this.score += 50
         } else if (lineNum === 4) {
             this.score += 100
+        } else if (lineNum === 5) {
+            this.score += 200
+        } else if (lineNum === 6) {
+            this.score += 500
+        } else if (lineNum === 7) {
+            this.score += 1000
+        } else if (lineNum === 8) {
+            this.score += 2000
         }
     }
 }
