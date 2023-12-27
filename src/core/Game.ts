@@ -62,6 +62,7 @@ export class Game {
         this.createNext()
 
         this.score = 0
+        this._duration = GameConfig.levels[0].duration
     }
 
     createNext() {
@@ -80,7 +81,7 @@ export class Game {
         }
 
         this._gameStatus = GameStatus.playing
-        if (!this.curTetris) {
+        if (true) {
             this.switchTetris()
         }
         this.autoDrop()

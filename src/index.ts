@@ -3,4 +3,4 @@ import {GamePageViewer} from "./core/viewer/GamePageViewer";
 
 var g = new Game(new GamePageViewer())
 
-g.start()
+// g.start()

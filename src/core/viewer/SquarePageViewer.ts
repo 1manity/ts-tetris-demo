@@ -3,7 +3,17 @@ import {IViewer} from "../types";
 import PageConfig from "./PageConfig";
 import $ from 'jquery'
 
-export class SquarePageViewer implements IViewer{
+interface ColorToCss {
+
+    [colorName: string]: {
+        backgroundColor?: string;
+        borderRadius?: string;
+        background?: string;
+    };
+
+}
+
+export class SquarePageViewer implements IViewer {
 
     private dom?: JQuery<HTMLElement>;
     private isRemove: boolean = false;
@@ -24,15 +34,16 @@ export class SquarePageViewer implements IViewer{
                 position: 'absolute',
                 width: PageConfig.SquareSize.width,
                 height: PageConfig.SquareSize.height,
-                border: '1px solid lightgrey',
+                border: '1px solid black',
                 boxSizing: 'border-box',
             }).appendTo(this.container);
         }
-
+        const colorToCss: ColorToCss = PageConfig.ColorToCss;
         this.dom.css({
             left: this.square.point.x * PageConfig.SquareSize.width,
             top: this.square.point.y * PageConfig.SquareSize.height,
-            backgroundColor: this.square.color,
+            // backgroundColor: this.square.color,
+            ...colorToCss[this.square.color]
         })
     }
 

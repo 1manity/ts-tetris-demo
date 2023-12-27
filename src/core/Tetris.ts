@@ -80,6 +80,7 @@ export const colors = [
     'orange'
 ]
 
+
 export function createTetris(centerPoint: Point) {
     let index = getRandom(0, shapes.length)
     const shape = shapes[index]
